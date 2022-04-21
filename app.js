@@ -4,13 +4,13 @@ const fs = require('fs');
 const app = express();
 const port = process.env.PORT || 3000;
 
-const goodsRouter = require('./routes/goods');
+const practiceRouter = require('./routes/practice');
 
 app.set('views',__dirname+'/views')
 app.set('view engine','ejs'); // npm install --save ejs
 app.use(express.static(__dirname + '/public'));//css, 이미지, 동영상 등의 정적 파일 접근경로 
 
-app.use('/goods', goodsRouter);
+app.use('/practice', practiceRouter);
 
 app.get('/', (req, res) => {
     res.json({

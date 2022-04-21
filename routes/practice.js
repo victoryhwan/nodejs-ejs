@@ -9,4 +9,8 @@ router.get('/jquery', function (req, res, next) {
 	res.render('jquery');
 });
 
+router.get('/youtube', function (req, res, next) {
+	res.render('youtube'); //test
+});
+
 module.exports = router;
